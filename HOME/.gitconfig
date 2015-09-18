@@ -1,0 +1,11 @@
+[user]
+	name = Yuanchao Sun
+	email = yuanchao.sun@gmail.com
+[core]
+	editor = vim
+[color]
+	ui = true
+[push]
+	default = simple
+[alias]
+    graph = log --graph --oneline --decorate
