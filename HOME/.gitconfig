@@ -8,4 +8,6 @@
 [push]
 	default = simple
 [alias]
-    graph = log --graph --oneline --decorate
+	graph = log --graph --oneline --decorate
+[credential]
+	helper = cache --timeout=3600
