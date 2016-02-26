@@ -86,6 +86,7 @@ set nu
 set noswapfile
 set noesckeys
 
+let g:netrw_fastbrowse = 2
 let g:netrw_list_hide = '\.pyc$,\.swp$'
 
 nnoremap <silent> <F10> :e%:h<CR>
