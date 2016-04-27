@@ -1,19 +1,18 @@
+(require 'package)
+(add-to-list 'package-archives
+             '("melpa" . "https://melpa.org/packages/"))
+(package-initialize)
 (tool-bar-mode -1)
 (set-default 'cursor-type 'hbar)
 (show-paren-mode)
 (global-hl-line-mode)
-(require 'package)
-(add-to-list 'package-archives
-	     '("melpa" . "http://melpa.milkbox.net/packages/")
-	     t)
-(add-to-list 'package-archives
-	     '("marmalade" . "http://marmalade-repo.org/packages/")
-	     t)
-(package-initialize)
-(load-theme 'monokai t)
+(load-theme 'dracula t)
+
 (global-set-key (kbd "M-x") 'smex)
+(global-set-key (kbd "M-X") 'smex-major-mode-commands)
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
-(require 'auto-complete-config)
+
+;; (require 'auto-complete-config)
 (ac-config-default)
 (global-linum-mode t)
 (setq make-backup-files nil)
