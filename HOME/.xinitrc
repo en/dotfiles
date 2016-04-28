@@ -24,6 +24,8 @@ fi
 # fi
 
 xset b off &
+# disable DPMS and prevent screen from blanking
+xset s off -dpms
 
 export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
