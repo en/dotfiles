@@ -76,11 +76,3 @@ fi
 
 # Try to keep environment pollution down, EPA loves us.
 unset use_color safe_term match_lhs
-
-export EDITOR=emacs
-
-# Go
-if [ -d "$HOME/go" ]; then
-    export GOPATH=$HOME/go
-    export PATH=$PATH:$GOPATH/bin
-fi
