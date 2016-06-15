@@ -35,6 +35,8 @@ values."
      ;; spell-checking
      ;; syntax-checking
      ;; version-control
+     (c-c++ :variables
+            c-c++-enable-clang-support t)
      go
      (colors :variables
              colors-enable-nyan-cat-progress-bar t)
@@ -245,6 +247,12 @@ before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
   ;; https://github.com/syl20bnr/spacemacs/issues/2705
   (setq tramp-ssh-controlmaster-options "-o ControlMaster=auto -o ControlPath='tramp.%%C' -o ControlPersist=no")
+  ;; Bind clang-format-region to C-M-tab in all modes:
+  (global-set-key [C-M-tab] 'clang-format-region)
+  ;; Bind clang-format-buffer to tab on the c++-mode only:
+  (add-hook 'c++-mode-hook 'clang-format-bindings)
+  (defun clang-format-bindings ()
+    (define-key c++-mode-map [tab] 'clang-format-buffer))
   )
 
 (defun dotspacemacs/user-config ()
