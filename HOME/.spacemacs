@@ -27,7 +27,7 @@ values."
      ;; better-defaults
      emacs-lisp
      ;; git
-     ;; markdown
+     markdown
      ;; org
      ;; (shell :variables
      ;;        shell-default-height 30
@@ -38,9 +38,8 @@ values."
      (c-c++ :variables
             c-c++-enable-clang-support t)
      go
-     (colors :variables
-             colors-enable-nyan-cat-progress-bar t)
      vimscript
+     rust
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
