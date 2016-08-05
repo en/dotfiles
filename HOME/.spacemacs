@@ -267,6 +267,7 @@ explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
   (setq user-full-name "Yuanchao Sun")
   (setq user-mail-address "yuanchao.sun@gmail.com")
+  (global-linum-mode)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
