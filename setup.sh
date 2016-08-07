@@ -25,6 +25,6 @@ for f in $(find ./HOME -type f); do
     if [[ ! -d "$dst_dir" ]]; then
         mkdir -p "$dst_dir"
     fi
-    ln -s "$src" "$dst"
+    ln -sf "$src" "$dst"
     echo "make a symlink: $dst -> $src"
 done

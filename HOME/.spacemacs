@@ -256,6 +256,7 @@ before packages are loaded. If you are unsure, you should try in setting them in
   (add-hook 'c++-mode-hook 'clang-format-bindings)
   (defun clang-format-bindings ()
     (define-key c++-mode-map [tab] 'clang-format-buffer))
+  (setq-default rust-enable-racer t)
   )
 
 (defun dotspacemacs/user-config ()
