@@ -40,6 +40,7 @@ values."
      go
      vimscript
      rust
+     themes-megapack
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -257,6 +258,8 @@ before packages are loaded. If you are unsure, you should try in setting them in
   (defun clang-format-bindings ()
     (define-key c++-mode-map [tab] 'clang-format-buffer))
   (setq-default rust-enable-racer t)
+  (setq-default dotspacemacs-themes '(dracula))
+  (global-linum-mode)
   )
 
 (defun dotspacemacs/user-config ()
@@ -268,7 +271,6 @@ explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
   (setq user-full-name "Yuanchao Sun")
   (setq user-mail-address "yuanchao.sun@gmail.com")
-  (global-linum-mode)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
