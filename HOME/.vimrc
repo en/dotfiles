@@ -54,5 +54,5 @@ if executable('rg')
   set grepprg=rg\ --vimgrep\ --no-heading
   set grepformat=%f:%l:%c:%m,%f:%l:%m
   let g:ackprg = 'rg --vimgrep --no-heading'
-  nnoremap <Leader>/ :Ack<Space><C-R>=expand('<cword>')<CR><CR>
+  nnoremap <Leader>/ :Ack!<Space><C-R>=expand('<cword>')<CR><CR>
 endif
