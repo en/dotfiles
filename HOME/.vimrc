@@ -36,6 +36,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'dracula/vim'
 Plug 'fatih/vim-go'
+Plug 'majutsushi/tagbar'
 Plug 'mileszs/ack.vim'
 
 " Add plugins to &runtimepath
@@ -50,9 +51,13 @@ let g:netrw_list_hide = '\.pyc$'
 
 let mapleader = "\<Space>"
 
+nnoremap <silent> <F8> :TagbarToggle<CR>
+let g:tagbar_sort = 0
+
 if executable('rg')
   set grepprg=rg\ --vimgrep\ --no-heading
   set grepformat=%f:%l:%c:%m,%f:%l:%m
   let g:ackprg = 'rg --vimgrep --no-heading'
   nnoremap <Leader>/ :Ack!<Space><C-R>=expand('<cword>')<CR><CR>
+  let g:ack_autoclose = 1
 endif
