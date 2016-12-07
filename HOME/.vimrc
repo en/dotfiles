@@ -61,3 +61,5 @@ if executable('rg')
   nnoremap <Leader>/ :Ack!<Space><C-R>=expand('<cword>')<CR><CR>
   let g:ack_autoclose = 1
 endif
+
+map <F9> :!xclip -f<CR>
