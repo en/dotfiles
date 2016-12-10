@@ -38,6 +38,7 @@ Plug 'dracula/vim'
 Plug 'fatih/vim-go'
 Plug 'majutsushi/tagbar'
 Plug 'mileszs/ack.vim'
+Plug 'ap/vim-buftabline'
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -48,6 +49,8 @@ set noswapfile
 set nu
 
 let g:netrw_list_hide = '\.pyc$'
+let g:buftabline_show = 1
+let g:buftabline_numbers = 1
 
 let mapleader = "\<Space>"
 
