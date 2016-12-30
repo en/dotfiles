@@ -1,4 +1,6 @@
-#!/usr/bin/env bash
+#!/bin/bash
+set -euo pipefail
+IFS=$'\n\t'
 
 for f in $(find ./HOME -type f); do
     src="$(realpath $f)"
@@ -29,5 +31,8 @@ for f in $(find ./HOME -type f); do
     echo "make a symlink: $dst -> $src"
 done
 
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-	    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+if [[ ! -e ~/.vim/autoload/plug.vim ]]; then
+    curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    vim +PlugInstall +qall
+fi
