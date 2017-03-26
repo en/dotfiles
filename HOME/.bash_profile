@@ -7,9 +7,8 @@
 export EDITOR=vim
 
 # Go
-if [ -d "$HOME/go" ]; then
-    export GOPATH=$HOME/go
-    export PATH=$PATH:$GOPATH/bin
+if [ -d "$HOME/go/bin" ]; then
+    export PATH=$PATH:$HOME/go/bin
 fi
 
 # Rust

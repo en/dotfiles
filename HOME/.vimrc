@@ -53,6 +53,7 @@ Plug 'mileszs/ack.vim'
 Plug 'ap/vim-buftabline'
 Plug 'cespare/vim-toml'
 Plug 'rust-lang/rust.vim'
+Plug 'stephpy/vim-yaml'
 
 " Add plugins to &runtimepath
 call plug#end()
