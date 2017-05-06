@@ -40,10 +40,6 @@ let g:netrw_list_hide = '\.pyc$'
 
 let mapleader = "\<Space>"
 
-if executable('xclip')
-  map <F9> :!xclip -f<CR>
-endif
-
 call plug#begin('~/.vim/plugged')
 
 Plug 'dracula/vim'
