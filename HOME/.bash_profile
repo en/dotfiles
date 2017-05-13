@@ -17,8 +17,4 @@ if [ -d "$HOME/.cargo" ]; then
     export PATH=$PATH:$CARGO_HOME/bin
 fi
 
-if [ -d "$HOME/github.com/rust/src" ]; then
-    export RUST_SRC_PATH=$HOME/github.com/rust/src
-fi
-
 [[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx
