@@ -15,6 +15,8 @@ if has("autocmd")
 
   " For all text files set 'textwidth' to 78 characters.
   autocmd FileType text setlocal textwidth=78
+  autocmd FileType python setlocal et ts=4 sw=4 sts=4 cc=80
+  autocmd FileType javascript setlocal et ts=2 sw=2 sts=2
 
   augroup END
 
