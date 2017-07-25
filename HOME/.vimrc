@@ -82,7 +82,7 @@ let g:rustfmt_autosave = 1
 
 " racer-rust/vim-racer
 set hidden
-let g:racer_cmd = "~/.cargo/bin/racer"
+let g:racer_cmd = "racer"
 let g:racer_experimental_completer = 1
 au FileType rust nmap gd <Plug>(rust-def)
 au FileType rust nmap gs <Plug>(rust-def-split)
