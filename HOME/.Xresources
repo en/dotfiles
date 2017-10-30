@@ -155,7 +155,7 @@ URxvt*matcher.button:  1
 !URxvt*font:        -xos4-terminus-medium-*-*-*-12-*-*-*-*-*-*-*
 !URxvt*boldFont:    -xos4-terminus-bold-*-*-*-12-*-*-*-*-*-*-*
 !  - use xft for drawing fonts
-URxvt*font:        xft:Source Code Pro:size=10,xft:WenQuanYi WenQuanYi Bitmap Song:size=10
+URxvt*font:        xft:Source Code Pro:size=12,xft:WenQuanYi WenQuanYi Bitmap Song:size=12
 !  - xft settings
 Xft*dpi:           96
 Xft*antialias:     true
