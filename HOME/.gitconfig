@@ -11,3 +11,8 @@
 	graph = log --graph --oneline --decorate
 [credential]
 	helper = cache --timeout=14400
+[sendemail]
+	smtpEncryption = tls
+	smtpServer = smtp.gmail.com
+	smtpUser = yuanchao.sun@gmail.com
+	smtpServerPort = 587
