@@ -44,47 +44,20 @@ let mapleader = "\<Space>"
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'dracula/vim'
-Plug 'fatih/vim-go'
-Plug 'majutsushi/tagbar'
-Plug 'mileszs/ack.vim'
 Plug 'ap/vim-buftabline'
-Plug 'cespare/vim-toml'
-Plug 'rust-lang/rust.vim'
-Plug 'racer-rust/vim-racer'
-Plug 'stephpy/vim-yaml'
+Plug 'dracula/vim'
+Plug 'majutsushi/tagbar'
 
 " Add plugins to &runtimepath
 call plug#end()
-
-" dracula/vim
-color dracula
 
 " ap/vim-buftabline
 let g:buftabline_show = 1
 let g:buftabline_numbers = 1
 
+" dracula/vim
+color dracula
+
 " majutsushi/tagbar
 nnoremap <silent> <F8> :TagbarToggle<CR>
 let g:tagbar_sort = 0
-
-" mileszs/ack.vim
-if executable('rg')
-  set grepprg=rg\ --vimgrep\ --no-heading
-  set grepformat=%f:%l:%c:%m,%f:%l:%m
-  let g:ackprg = 'rg --vimgrep --no-heading'
-  let g:ack_autoclose = 1
-  nnoremap <Leader>/ :Ack!<Space><C-R>=expand('<cword>')<CR><CR>
-endif
-
-" rust-lang/rust.vim
-let g:rustfmt_autosave = 1
-
-" racer-rust/vim-racer
-set hidden
-let g:racer_cmd = "racer"
-let g:racer_experimental_completer = 1
-au FileType rust nmap gd <Plug>(rust-def)
-au FileType rust nmap gs <Plug>(rust-def-split)
-au FileType rust nmap gx <Plug>(rust-def-vertical)
-au FileType rust nmap <leader>gd <Plug>(rust-doc)
