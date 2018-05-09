@@ -46,7 +46,9 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'ap/vim-buftabline'
 Plug 'dracula/vim'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'majutsushi/tagbar'
+Plug 'mileszs/ack.vim'
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -61,3 +63,12 @@ color dracula
 " majutsushi/tagbar
 nnoremap <silent> <F8> :TagbarToggle<CR>
 let g:tagbar_sort = 0
+
+" mileszs/ack.vim
+if executable('rg')
+  set grepprg=rg\ --vimgrep\ --no-heading\ --smart-case
+  set grepformat=%f:%l:%c:%m,%f:%l:%m
+  let g:ackprg = 'rg --vimgrep --no-heading --smart-case'
+  let g:ack_autoclose = 1
+  nnoremap <Leader>/ :Ack!<Space><C-R>=expand('<cword>')<CR><CR>
+endif
