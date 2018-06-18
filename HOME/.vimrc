@@ -58,7 +58,7 @@ let g:buftabline_show = 1
 let g:buftabline_numbers = 1
 
 " dracula/vim
-color dracula
+silent! color dracula
 
 " majutsushi/tagbar
 nnoremap <silent> <F8> :TagbarToggle<CR>
