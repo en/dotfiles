@@ -17,6 +17,7 @@ if has("autocmd")
   autocmd FileType text setlocal textwidth=78
   autocmd FileType python setlocal et ts=4 sw=4 sts=4 cc=80
   autocmd FileType javascript setlocal et ts=2 sw=2 sts=2
+  autocmd FileType solidity setlocal et ts=2 sw=2 sts=2
 
   augroup END
 
@@ -49,6 +50,7 @@ Plug 'dracula/vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'majutsushi/tagbar'
 Plug 'mileszs/ack.vim'
+Plug 'tomlion/vim-solidity'
 
 " Add plugins to &runtimepath
 call plug#end()
