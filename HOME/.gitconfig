@@ -9,3 +9,5 @@
 	default = simple
 [alias]
 	graph = log --graph --oneline --decorate
+[credential]
+	helper = osxkeychain
