@@ -43,21 +43,26 @@ let mapleader = "\<Space>"
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'ap/vim-buftabline'
 Plug 'dracula/vim'
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'ap/vim-buftabline'
 Plug 'majutsushi/tagbar'
 Plug 'mileszs/ack.vim'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'rust-lang/rust.vim'
+Plug 'prabirshrestha/async.vim'
+Plug 'prabirshrestha/vim-lsp'
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
 
 " Add plugins to &runtimepath
 call plug#end()
 
+" dracula/vim
+silent! color dracula
+
 " ap/vim-buftabline
 let g:buftabline_show = 1
 let g:buftabline_numbers = 1
-
-" dracula/vim
-silent! color dracula
 
 " majutsushi/tagbar
 nnoremap <silent> <F8> :TagbarToggle<CR>
@@ -70,4 +75,16 @@ if executable('rg')
   let g:ackprg = 'rg --vimgrep --no-heading --smart-case'
   let g:ack_autoclose = 1
   nnoremap <Leader>/ :Ack!<Space><C-R>=expand('<cword>')<CR><CR>
+endif
+
+" rust-lang/rust.vim
+let g:rustfmt_autosave = 1
+
+" prabirshrestha/vim-lsp
+if executable('rls')
+  au User lsp_setup call lsp#register_server({
+    \ 'name': 'rls',
+    \ 'cmd': {server_info->['rustup', 'run', 'stable', 'rls']},
+    \ 'whitelist': ['rust'],
+    \ })
 endif
