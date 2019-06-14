@@ -48,6 +48,8 @@ Plug 'dracula/vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'majutsushi/tagbar'
 Plug 'mileszs/ack.vim'
+Plug 'rust-lang/rust.vim'
+Plug 'editorconfig/editorconfig-vim'
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -71,3 +73,6 @@ if executable('rg')
   let g:ack_autoclose = 1
   nnoremap <Leader>/ :Ack!<Space><C-R>=expand('<cword>')<CR><CR>
 endif
+
+" rust-lang/rust.vim
+let g:rustfmt_autosave = 1
