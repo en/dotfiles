@@ -49,10 +49,7 @@ Plug 'majutsushi/tagbar'
 Plug 'mileszs/ack.vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'rust-lang/rust.vim'
-Plug 'prabirshrestha/async.vim'
-Plug 'prabirshrestha/vim-lsp'
-Plug 'prabirshrestha/asyncomplete.vim'
-Plug 'prabirshrestha/asyncomplete-lsp.vim'
+Plug 'editorconfig/editorconfig-vim'
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -79,12 +76,3 @@ endif
 
 " rust-lang/rust.vim
 let g:rustfmt_autosave = 1
-
-" prabirshrestha/vim-lsp
-if executable('rls')
-  au User lsp_setup call lsp#register_server({
-    \ 'name': 'rls',
-    \ 'cmd': {server_info->['rustup', 'run', 'stable', 'rls']},
-    \ 'whitelist': ['rust'],
-    \ })
-endif

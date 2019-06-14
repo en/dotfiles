@@ -37,3 +37,9 @@ fi
 if [ -d "$HOME/.cargo/bin" ]; then
 	export PATH="$HOME/.cargo/bin:$PATH"
 fi
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/ys/google-cloud-sdk/path.bash.inc' ]; then . '/Users/ys/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/ys/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/ys/google-cloud-sdk/completion.bash.inc'; fi
