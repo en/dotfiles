@@ -4,7 +4,7 @@
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
-export EDITOR=vim
+export EDITOR=nvim
 
 # Go
 if [ -d "$HOME/go/bin" ]; then

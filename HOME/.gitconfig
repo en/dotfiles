@@ -2,7 +2,7 @@
 	name = Yuanchao Sun
 	email = yuanchao.sun@gmail.com
 [core]
-	editor = vim
+	editor = nvim
 [color]
 	ui = true
 [push]

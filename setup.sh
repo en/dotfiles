@@ -31,8 +31,8 @@ for f in $(find ./HOME -type f); do
     echo "make a symlink: $dst -> $src"
 done
 
-if [[ ! -e ~/.vim/autoload/plug.vim ]]; then
-    curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+if [[ ! -e ~/.local/share/nvim/site/autoload/plug.vim ]]; then
+    curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
         https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-    vim +PlugInstall +qall
+    nvim +PlugInstall +qall
 fi
