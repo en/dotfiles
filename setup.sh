@@ -7,7 +7,7 @@ for f in $(find ./HOME -type f); do
     dst="${f/.\/HOME/$HOME}"
     if [[ -e "$dst" ]]; then
         if [[ -h "$dst" ]]; then
-            if [[ "$(readlink -m $dst)" == "$src" ]]; then
+            if [[ "$(readlink -n $dst)" == "$src" ]]; then
                 continue
             else
                 rm "$dst"
@@ -31,8 +31,8 @@ for f in $(find ./HOME -type f); do
     echo "make a symlink: $dst -> $src"
 done
 
-if [[ ! -e ~/.vim/autoload/plug.vim ]]; then
-    curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+if [[ ! -e ~/.local/share/nvim/site/autoload/plug.vim ]]; then
+    curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
         https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-    vim +PlugInstall +qall
+    nvim +PlugInstall +qall
 fi

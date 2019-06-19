@@ -1,4 +1,4 @@
-export EDITOR=vim
+export EDITOR=nvim
 export CLICOLOR=1
 
 alias ls='ls -GFh'
