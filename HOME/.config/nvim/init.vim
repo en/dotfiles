@@ -10,7 +10,6 @@ set nu
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'ap/vim-buftabline'
-Plug 'editorconfig/editorconfig-vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'mileszs/ack.vim'
 Plug 'rust-lang/rust.vim'
