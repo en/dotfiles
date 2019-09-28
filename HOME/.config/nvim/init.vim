@@ -10,7 +10,6 @@ set nu
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'ap/vim-buftabline'
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'mileszs/ack.vim'
 Plug 'rust-lang/rust.vim'
 Plug 'autozimu/LanguageClient-neovim', {
@@ -47,4 +46,4 @@ if executable('rg')
 endif
 
 " rust-lang/rust.vim
-" let g:rustfmt_autosave = 1
+let g:rustfmt_autosave = 1
