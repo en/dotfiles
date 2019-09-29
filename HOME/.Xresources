@@ -1,8 +1,11 @@
 ! General
 URxvt*scrollBar:	false
 
-! Appearance
+! Extensions
+URxvt*perl-lib:		/usr/lib/urxvt/perl/
+URxvt*perl-ext-common:	default,selection-to-clipboard
 
+! Appearance
 !  - use xft for drawing fonts
 URxvt*font:		xft:Source Code Pro:size=12,xft:Source Han Sans CN:size=12
 
