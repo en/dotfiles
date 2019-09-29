@@ -17,6 +17,11 @@ local hotkeys_popup = require("awful.hotkeys_popup")
 -- Enable hotkeys help widget for VIM and other apps
 -- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys")
+local battery_widget = require("awesome-wm-widgets.battery-widget.battery")
+local brightness_widget = require("awesome-wm-widgets.brightness-widget.brightness")
+local cpu_widget = require("awesome-wm-widgets.cpu-widget.cpu-widget")
+local ram_widget = require("awesome-wm-widgets.ram-widget.ram-widget")
+local volume_widget = require("awesome-wm-widgets.volume-widget.volume")
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -103,7 +108,7 @@ menubar.utils.terminal = terminal -- Set the terminal for applications that requ
 -- }}}
 
 -- Keyboard map indicator and switcher
-mykeyboardlayout = awful.widget.keyboardlayout()
+-- mykeyboardlayout = awful.widget.keyboardlayout()
 
 -- {{{ Wibar
 -- Create a textclock widget
@@ -210,7 +215,18 @@ awful.screen.connect_for_each_screen(function(s)
         s.mytasklist, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
-            mykeyboardlayout,
+            -- mykeyboardlayout,
+            cpu_widget(),
+            ram_widget(),
+            battery_widget,
+            brightness_widget({
+                    get_brightness_cmd = 'xbacklight -get',
+                    inc_brightness_cmd = 'xbacklight -inc 5',
+                    dec_brightness_cmd = 'xbacklight -dec 5'
+            }),
+            volume_widget({
+                    volume_audio_controller = 'alsa_only'
+            }),
             wibox.widget.systray(),
             mytextclock,
             s.mylayoutbox,
