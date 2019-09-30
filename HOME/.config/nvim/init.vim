@@ -25,7 +25,7 @@ call plug#end()
 let mapleader = "\<Space>"
 
 let g:LanguageClient_serverCommands = {
-    \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
+    \ 'rust': ['/usr/bin/rustup', 'run', 'stable', 'rls'],
     \ }
 
 nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
