@@ -38,3 +38,14 @@ auto-completion-tab-key-behavior = "cycle"
 name = 'shell'
 default_position = 'top'
 default_height = 30
+
+[[layers]]
+name = "lsp"
+filetypes = [
+  "rust"
+]
+[layers.override_cmd]
+rust = ["rustup", "run", "stable", "rls"]
+
+[[layers]]
+name = "lang#rust"
