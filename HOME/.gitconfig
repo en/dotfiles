@@ -3,6 +3,7 @@
 	email = yuanchao.sun@gmail.com
 [core]
 	editor = nvim
+	pager = less -X
 [color]
 	ui = true
 [push]

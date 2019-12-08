@@ -20,7 +20,7 @@ Xft.lcdfilter:		lcddefault
 
 !  - pseudo transparency
 URxvt*shading:		50
-URxvt*transparent:	true
+URxvt*transparent:	false
 
 !  - color scheme
 *background:		#0f0f0f

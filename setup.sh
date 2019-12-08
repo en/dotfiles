@@ -31,8 +31,10 @@ for f in $(find ./HOME -type f); do
     echo "make a symlink: $dst -> $src"
 done
 
-if [[ ! -e ~/.local/share/nvim/site/autoload/plug.vim ]]; then
-    curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
-        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-    nvim +PlugInstall +UpdateRemotePlugins +qa
+if [[ ! -e ~/.SpaceVim ]]; then
+    curl -sLf https://spacevim.org/install.sh | bash
+fi
+
+if [[ ! -e ~/.oh-my-zsh ]]; then
+    sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
