@@ -99,8 +99,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 export EDITOR='nvim'
-
-alias vim="nvim"
+export PATH=$HOME/bin:$PATH
 
 # Rust
 if [ -d "$HOME/.cargo/bin" ]; then

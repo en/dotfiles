@@ -1,19 +1,19 @@
 [user]
-	name = Yuanchao Sun
-	email = yuanchao.sun@gmail.com
+  name = Yuanchao Sun
+  email = yuanchao.sun@gmail.com
 [core]
-	editor = nvim
-	pager = less -X
+  editor = nvim
+  pager = less -X
 [color]
-	ui = true
+  ui = true
 [push]
-	default = simple
+  default = simple
 [alias]
-	graph = log --graph --oneline --decorate
+  graph = log --graph --oneline --decorate
 [credential]
-	helper = cache --timeout=14400
+  helper = cache --timeout=14400
 [sendemail]
-	smtpEncryption = tls
-	smtpServer = smtp.gmail.com
-	smtpUser = yuanchao.sun@gmail.com
-	smtpServerPort = 587
+  smtpEncryption = tls
+  smtpServer = smtp.gmail.com
+  smtpUser = yuanchao.sun@gmail.com
+  smtpServerPort = 587

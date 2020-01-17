@@ -1,51 +1,64 @@
 ! General
-URxvt*scrollBar:	false
+URxvt*scrollBar:        false
 
 ! Extensions
-URxvt*perl-lib:		/usr/lib/urxvt/perl/
-URxvt*perl-ext-common:	default,selection-to-clipboard
+URxvt*perl-lib:         /usr/lib/urxvt/perl/
+URxvt*perl-ext-common:  default,selection-to-clipboard
 
 ! Appearance
 !  - use xft for drawing fonts
-URxvt*font:		xft:Source Code Pro:size=12,xft:Source Han Sans CN:size=12
+URxvt*font:             xft:Source Code Pro:size=12,xft:Source Han Sans CN:size=12
 
 !  - xft settings
-Xft.dpi:		96
-Xft.antialias:		true
-Xft.rgba:		rgb
-Xft.hinting:		true
-Xft.hintstyle:		hintslight
-Xft.autohint:		false
-Xft.lcdfilter:		lcddefault
+Xft.dpi:                96
+Xft.antialias:          true
+Xft.rgba:               rgb
+Xft.hinting:            true
+Xft.hintstyle:          hintslight
+Xft.autohint:           true
+Xft.lcdfilter:          lcddefault
 
 !  - pseudo transparency
-URxvt*shading:		50
-URxvt*transparent:	false
+URxvt*shading:          50
+URxvt*transparent:      false
 
 !  - color scheme
-*background:		#0f0f0f
-*foreground:		#c8c8c8
+
+! Multicolor
+
 !black
-*color0:		#251f1f
-*color8:		#5e5e5e
+*color0:                #171717
+*color8:                #737373
+
 !red
-*color1:		#eb4509
-*color9:		#eb4509
+*color1:                #FF5E5E
+*color9:                #FF7878
+
 !green
-*color2:		#94e76b
-*color10:		#95e76b
+*color2:                #9CE82B
+*color10:               #9ACD32
+
 !yellow
-*color3:		#ffac18
-*color11:		#ffac18
+*color3:                #F0E68C
+*color11:               #EEE8AA
+
 !blue
-*color4:		#46aede
-*color12:		#46aede
+*color4:                #008AFF
+*color12:               #4F98FF
+
 !magenta
-*color5:		#e32c57
-*color13:		#e32c57
+*color5:                #E88CFF
+*color13:               #EDA6FF
+
 !cyan
-*color6:		#d6dbac
-*color14:		#d6dbac
+*color6:                #87CEFA
+*color14:               #B0E2FF
+
 !white
-*color7:		#efefef
-*color15:		#efefef
+*color7:                #DCDCCC
+*color15:               #FFFFFF
+
+*background:            #101010
+*foreground:            #d4d4d4
+
+*cursorColor:           darkorange2
