@@ -1,7 +1,7 @@
 # dotfiles
 My configuration files from $HOME. (archlinux, zsh, awesome, rxvt-unicode, spacemacs)
 ```
-$ sudo pacman -S git zsh awesome rxvt-unicode emacs neovim xorg-server xf86-video-intel xorg-xinit openssh adobe-source-code-pro-fonts adobe-source-han-sans-cn-fonts terminus-font ibus-libpinyin feh scrot ripgrep slock
+$ sudo pacman -S git zsh awesome rxvt-unicode emacs neovim xorg-server xf86-video-intel xorg-xinit openssh adobe-source-code-pro-fonts adobe-source-han-sans-cn-fonts terminus-font otf-fira-code ttf-fira-code ibus-libpinyin feh scrot ripgrep slock
 $ git clone https://github.com/en/dotfiles.git
 $ cd dotfiles
 $ ./setup.sh
